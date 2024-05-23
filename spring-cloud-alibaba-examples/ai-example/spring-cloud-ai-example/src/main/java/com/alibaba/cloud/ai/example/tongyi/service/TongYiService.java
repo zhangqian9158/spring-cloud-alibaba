@@ -101,6 +101,13 @@ public interface TongYiService {
 	String genAudio(String text);
 
 	/**
+	 * Audio Transcription.
+	 * @param audioUrls url of the audio file to be transcribed.
+	 * @return the result file Path.
+	 */
+	String audioTranscription(String audioUrls);
+
+	/**
 	 * TongYI LLM Text embedding.
 	 * @param text input text.
 	 * @return {@link EmbeddingResponse}

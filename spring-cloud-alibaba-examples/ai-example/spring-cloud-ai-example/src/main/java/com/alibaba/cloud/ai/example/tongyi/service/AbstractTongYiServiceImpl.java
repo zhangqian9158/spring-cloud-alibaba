@@ -98,4 +98,11 @@ public abstract class AbstractTongYiServiceImpl implements TongYiService {
 				.getStackTrace()[2].getMethodName() + INFO_SUFFIX);
 	}
 
+	@Override
+	public String audioTranscription(String url) {
+
+		throw new RuntimeException(INFO_PREFIX + Thread.currentThread()
+				.getStackTrace()[2].getMethodName() + INFO_SUFFIX);
+	}
+
 }
