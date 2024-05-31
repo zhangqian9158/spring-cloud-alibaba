@@ -46,7 +46,7 @@
         <module>rocketmq-example/rocketmq-tx-example</module>
         <module>rocketmq-example/rocketmq-pollable-consume-example</module>
         <module>rocketmq-example/rocketmq-retrieable-consume-example</module>
-
+        <module>spring-cloud-scheduling-example</module>
         <module>spring-cloud-bus-rocketmq-example</module>
         <module>spring-cloud-alibaba-sidecar-examples/spring-cloud-alibaba-sidecar-nacos-example</module>
         <module>spring-cloud-alibaba-sidecar-examples/spring-cloud-alibaba-sidecar-consul-example</module>
@@ -57,7 +57,7 @@
         <module>integrated-example/integrated-praise-provider</module>
         <module>integrated-example/integrated-praise-consumer</module>
         <module>integrated-example/integrated-common</module>
-		<module>integrated-example/integrated-frontend</module>
+        <module>integrated-example/integrated-frontend</module>
         <module>governance-example/label-routing-example/istio-consumer-example</module>
         <module>governance-example/label-routing-example/opensergo-consumer-example</module>
         <module>governance-example/label-routing-example/consumer-example</module>
@@ -65,7 +65,6 @@
         <module>governance-example/label-routing-example/provider-version-example</module>
         <module>governance-example/authentication-example/istio-authentication-provider-mvc-example</module>
         <module>governance-example/authentication-example/istio-authentication-provider-webflux-example</module>
-
     </modules>
 
     <build>
