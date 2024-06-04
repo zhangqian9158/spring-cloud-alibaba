@@ -1,5 +1,5 @@
 /*
- * Copyright 2013-2023 the original author or authors.
+ * Copyright 2024-2025 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,26 +14,25 @@
  * limitations under the License.
  */
 
-package com.alibaba.cloud.seata.feign;
-
-import feign.RequestInterceptor;
-import feign.RequestTemplate;
-import io.seata.core.context.RootContext;
-
-import org.springframework.util.StringUtils;
+package com.alibaba.cloud.scheduling;
 
 /**
- * @author wang.liang
- */
-public class SeataFeignRequestInterceptor implements RequestInterceptor {
+ * @author yaohui
+ **/
+public final class SchedulingConstants {
 
-	@Override
-	public void apply(RequestTemplate template) {
-		String xid = RootContext.getXID();
-		if (!StringUtils.hasLength(xid)) {
-			return;
-		}
+	/**
+	 * Scheduling config prefix.
+	 */
+	public static final String SCHEDULING_CONFIG_PREFIX = "spring.cloud.scheduling";
 
-		template.header(RootContext.KEY_XID, xid);
+	/**
+	 * Scheduling distributed mode.
+	 */
+	public static final String SCHEDULING_CONFIG_DISTRIBUTED_MODE_KEY = SCHEDULING_CONFIG_PREFIX + ".distributed-mode";
+
+	private SchedulingConstants() {
+		throw new AssertionError("Must not instantiate constant utility class");
 	}
+
 }

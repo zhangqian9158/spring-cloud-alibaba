@@ -1,5 +1,5 @@
 /*
- * Copyright 2013-2023 the original author or authors.
+ * Copyright 2024-2025 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,26 +14,23 @@
  * limitations under the License.
  */
 
-package com.alibaba.cloud.seata.feign;
+package com.alibaba.cloud.examples.schedule;
 
-import feign.RequestInterceptor;
-import feign.RequestTemplate;
-import io.seata.core.context.RootContext;
-
-import org.springframework.util.StringUtils;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.scheduling.annotation.EnableScheduling;
 
 /**
- * @author wang.liang
+ * ScheduleApplication.
+ *
+ * @author yaohui
  */
-public class SeataFeignRequestInterceptor implements RequestInterceptor {
+@SpringBootApplication
+@EnableScheduling
+public class ScheduleApplication {
 
-	@Override
-	public void apply(RequestTemplate template) {
-		String xid = RootContext.getXID();
-		if (!StringUtils.hasLength(xid)) {
-			return;
-		}
-
-		template.header(RootContext.KEY_XID, xid);
+	public static void main(String[] args) {
+		SpringApplication.run(ScheduleApplication.class, args);
 	}
+
 }
